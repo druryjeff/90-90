@@ -1,0 +1,40 @@
+main {
+    @extend .wrap;
+    @include layoutVertical(2.5rem);
+    padding-bottom: 2.5rem;
+    @media screen and (min-width: 64em){
+        padding-bottom: 5rem;
+    }
+    .content {
+        @include layoutVertical(2.5rem);
+        max-width: 50em;
+    }
+    .ctas {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1rem;
+        a {
+            @extend .btn;
+            @extend .btn-hollow;
+        }
+    }
+    .question {
+        background-color: $color-grey-200;
+    }
+    .process-note {
+        background-color: $color-grey-200;
+        padding: 2.5rem;
+        max-width: 40em;
+        h2 {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+// Home page does not have breadcrumbs; add space to account for this
+header + main {
+    padding-top: 2.5rem;
+    @media screen and (min-width: 64em){
+        padding-top: 5rem;
+    }
+}
