@@ -11,6 +11,7 @@ const header = `<header>
                     </nav>
                     <div class="signup">
                         <a href="host-event.html">Host an event</a>
+                        <a href="#">Donate</a>
                     </div>
                 </header>`;
 
